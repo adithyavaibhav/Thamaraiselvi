@@ -3,582 +3,684 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Training Brochure - Communique</title>
+    <title>Dr. Thamarai Selvi | Corporate Trainer | Communique</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        /* CSS Styles */
         :root {
-            --primary-color: #0066cc;
-            --secondary-color: #ff6b6b;
-            --accent-color: #4ecdc4;
-            --dark-color: #2c3e50;
-            --light-color: #f7f7f7;
+            --primary: #2563eb;
+            --secondary: #7c3aed;
+            --accent: #ec4899;
+            --dark: #1e293b;
+            --light: #f8fafc;
+            --success: #10b981;
+            --warning: #f59e0b;
+            --danger: #ef4444;
         }
-        
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: var(--dark-color);
-            max-width: 1100px;
+            font-family: 'Poppins', system-ui, -apple-system, sans-serif;
+            line-height: 1.7;
+            color: var(--dark);
+            background-color: #f1f5f9;
+            background-image: radial-gradient(circle at 10% 20%, rgba(37, 99, 235, 0.03) 0%, rgba(236, 72, 153, 0.03) 90%);
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
             margin: 0 auto;
-            padding: 20px;
-            background-color: #f9f9f9;
-            background-image: radial-gradient(circle at 10% 20%, rgba(0, 102, 204, 0.05) 0%, rgba(255, 107, 107, 0.05) 90%);
+            padding: 0 20px;
         }
-        
-        .header {
-            text-align: center;
-            margin-bottom: 40px;
-            padding: 30px 20px;
-            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+
+        /* Header Styles */
+        header {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
             color: white;
-            border-radius: 10px;
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-            animation: fadeInDown 1s;
-        }
-        
-        .logo {
-            font-size: 36px;
-            font-weight: bold;
-            margin-bottom: 10px;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-        }
-        
-        .tagline {
-            font-style: italic;
-            font-size: 18px;
-            margin-bottom: 25px;
-            opacity: 0.9;
-        }
-        
-        .abc {
-            display: flex;
-            justify-content: center;
-            gap: 40px;
-            margin-bottom: 30px;
-        }
-        
-        .abc-item {
-            text-align: center;
-            font-weight: bold;
-            font-size: 18px;
-            padding: 15px 25px;
-            background-color: rgba(255, 255, 255, 0.2);
-            border-radius: 50px;
-            transition: all 0.3s ease;
-        }
-        
-        .abc-item:hover {
-            transform: translateY(-5px);
-            background-color: rgba(255, 255, 255, 0.3);
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-        }
-        
-        .contact-info {
-            display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
-            margin-bottom: 20px;
-        }
-        
-        .contact-section {
-            margin: 15px;
-            padding: 15px;
-            background-color: rgba(255, 255, 255, 0.2);
-            border-radius: 8px;
-            min-width: 180px;
-            transition: all 0.3s ease;
-        }
-        
-        .contact-section:hover {
-            transform: scale(1.05);
-            background-color: rgba(255, 255, 255, 0.3);
-        }
-        
-        h1, h2 {
-            color: var(--primary-color);
+            padding: 2rem 0;
             position: relative;
-            padding-bottom: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
         }
-        
-        h1::after, h2::after {
+
+        header::before {
             content: '';
             position: absolute;
-            bottom: 0;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 70%);
+            transform: rotate(30deg);
+            animation: shine 8s infinite linear;
+        }
+
+        .header-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .logo {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+            background: linear-gradient(to right, white, #e0e7ff);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            animation: fadeInDown 1s both;
+        }
+
+        .tagline {
+            font-size: 1.5rem;
+            font-weight: 300;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+            animation: fadeIn 1s 0.3s both;
+        }
+
+        .abc-container {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 2rem;
+            animation: fadeIn 1s 0.5s both;
+        }
+
+        .abc-item {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .abc-item:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.25);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Main Content Styles */
+        main {
+            padding: 4rem 0;
+        }
+
+        section {
+            margin-bottom: 4rem;
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .section-header {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 1.5rem 2rem;
+            position: relative;
+        }
+
+        .section-header h2 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-header h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
             left: 0;
             width: 60px;
             height: 4px;
-            background: var(--secondary-color);
+            background: var(--accent);
             border-radius: 2px;
         }
-        
-        h1 {
-            font-size: 32px;
-            margin-top: 0;
-            animation: fadeIn 1s 0.3s both;
+
+        .section-content {
+            padding: 2rem;
         }
-        
-        h2 {
-            font-size: 26px;
-            margin-top: 40px;
-            animation: fadeIn 1s 0.4s both;
-        }
-        
-        .about-trainer {
-            background-color: white;
-            padding: 30px;
-            border-radius: 10px;
-            margin-bottom: 40px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-            border-left: 5px solid var(--accent-color);
-            animation: fadeInUp 1s 0.5s both;
-        }
-        
-        .about-trainer p {
-            font-size: 16px;
-            line-height: 1.8;
-        }
-        
-        .clients-section {
+
+        /* About Section */
+        .about-content {
             display: flex;
-            flex-wrap: wrap;
-            gap: 30px;
-            margin-bottom: 40px;
+            gap: 2rem;
+            align-items: center;
         }
-        
-        .client-list {
+
+        .about-text {
+            flex: 1;
+        }
+
+        .about-text p {
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+            color: #334155;
+        }
+
+        .trainer-image {
+            width: 300px;
+            height: 300px;
+            border-radius: 16px;
+            object-fit: cover;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            border: 5px solid white;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        /* Clients Section */
+        .clients-container {
+            display: flex;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .client-category {
             flex: 1;
             min-width: 300px;
-            background-color: white;
-            padding: 25px;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-            transition: all 0.3s ease;
-            animation: fadeInUp 1s 0.6s both;
         }
-        
-        .client-list:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-        }
-        
-        .client-list ul {
+
+        .client-list {
             columns: 2;
-            -webkit-columns: 2;
-            -moz-columns: 2;
-            padding-left: 20px;
+            column-gap: 2rem;
+            margin-top: 1rem;
         }
-        
+
         .client-list li {
-            margin-bottom: 10px;
+            margin-bottom: 0.8rem;
             break-inside: avoid;
-            padding: 5px 0;
+            padding: 0.5rem 0;
             position: relative;
-            transition: all 0.2s ease;
+            padding-left: 1.5rem;
+            transition: all 0.3s ease;
         }
-        
+
         .client-list li:hover {
-            color: var(--primary-color);
+            color: var(--primary);
             transform: translateX(5px);
         }
-        
+
         .client-list li::before {
-            content: '•';
-            color: var(--secondary-color);
-            font-weight: bold;
-            display: inline-block;
-            width: 1em;
-            margin-left: -1em;
+            content: '▹';
+            position: absolute;
+            left: 0;
+            color: var(--accent);
         }
-        
-        .programs-container {
-            background-color: white;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-            animation: fadeInUp 1s 0.7s both;
+
+        .client-list strong {
+            color: var(--primary);
+            font-weight: 600;
         }
-        
+
+        .client-list em {
+            color: var(--secondary);
+            font-style: italic;
+        }
+
+        /* Programs Section */
         .programs-list {
             columns: 3;
-            -webkit-columns: 3;
-            -moz-columns: 3;
-            padding-left: 20px;
+            column-gap: 2rem;
         }
-        
+
         .programs-list li {
-            margin-bottom: 12px;
+            margin-bottom: 1rem;
             break-inside: avoid;
-            padding: 8px 15px;
-            background-color: var(--light-color);
-            border-radius: 20px;
-            display: inline-block;
+            padding: 0.8rem 1.2rem;
+            background: #f8fafc;
+            border-radius: 8px;
             transition: all 0.3s ease;
+            position: relative;
+            padding-left: 1.8rem;
         }
-        
+
         .programs-list li:hover {
-            background-color: var(--primary-color);
+            background: var(--primary);
             color: white;
-            transform: scale(1.03);
-            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(37, 99, 235, 0.3);
         }
-        
-        .highlight {
+
+        .programs-list li::before {
+            content: '•';
+            position: absolute;
+            left: 0.8rem;
+            color: var(--accent);
             font-weight: bold;
-            color: white;
-            font-size: 18px;
-            margin-bottom: 5px;
-        }
-        
-        strong {
-            color: var(--primary-color);
-        }
-        
-        em {
-            color: var(--secondary-color);
         }
 
-        /* New Contact Card Styles */
-        .contact-card {
-            background: white;
-            border-radius: 15px;
-            padding: 30px;
-            margin: 40px 0;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-            text-align: center;
-            animation: fadeInUp 1s 0.8s both;
-        }
-
-        .contact-card h2 {
-            margin-top: 0;
-            color: var(--primary-color);
-        }
-
+        /* Contact Section */
         .contact-methods {
             display: flex;
-            justify-content: center;
+            gap: 2rem;
             flex-wrap: wrap;
-            gap: 30px;
-            margin-top: 30px;
+            justify-content: center;
+            margin-top: 2rem;
         }
 
-        .contact-method {
-            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+        .contact-card {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
             color: white;
-            padding: 25px;
-            border-radius: 12px;
-            width: 250px;
+            padding: 2rem;
+            border-radius: 16px;
+            width: 300px;
             transition: all 0.3s ease;
-            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
         }
 
-        .contact-method:hover {
+        .contact-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(255,255,255,0.1), rgba(255,255,255,0));
+            z-index: -1;
+            transition: all 0.3s ease;
+        }
+
+        .contact-card:hover {
             transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+            box-shadow: 0 15px 30px rgba(37, 99, 235, 0.3);
         }
 
-        .contact-method i {
-            font-size: 40px;
-            margin-bottom: 15px;
+        .contact-card:hover::before {
+            background: linear-gradient(135deg, rgba(255,255,255,0.2), rgba(255,255,255,0.1));
         }
 
-        .contact-method h3 {
-            margin: 0 0 10px 0;
-            font-size: 20px;
+        .contact-card i {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: white;
         }
 
-        .contact-method p {
-            margin: 0;
-            font-size: 18px;
-            word-break: break-all;
+        .contact-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
         }
 
-        .contact-method a {
+        .contact-card p {
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+        }
+
+        .contact-card a {
             color: white;
             text-decoration: none;
+            display: block;
+            padding: 0.8rem 1.5rem;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 50px;
+            text-align: center;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.3);
         }
 
-        .contact-method.phone {
-            background: linear-gradient(135deg, #4CAF50, #8BC34A);
+        .contact-card a:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateY(-3px);
         }
 
-        .contact-method.email {
-            background: linear-gradient(135deg, #FF5722, #FF9800);
+        .phone-card {
+            background: linear-gradient(135deg, var(--success), #34d399);
         }
 
-        .contact-method.whatsapp {
+        .email-card {
+            background: linear-gradient(135deg, var(--warning), #fbbf24);
+        }
+
+        .whatsapp-card {
             background: linear-gradient(135deg, #25D366, #128C7E);
         }
 
-        @keyframes pulse {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.05); }
-            100% { transform: scale(1); }
-        }
-
-        .pulse {
-            animation: pulse 2s infinite;
-        }
-
+        /* Animations */
         @keyframes float {
             0% { transform: translateY(0px); }
-            50% { transform: translateY(-10px); }
+            50% { transform: translateY(-15px); }
             100% { transform: translateY(0px); }
         }
-        
-        .floating {
-            animation: float 4s ease-in-out infinite;
+
+        @keyframes shine {
+            0% { transform: rotate(30deg) translate(-10%, -10%); }
+            100% { transform: rotate(30deg) translate(10%, 10%); }
         }
-        
-        @media (max-width: 768px) {
-            .client-list ul, .programs-list {
-                columns: 1;
-                -webkit-columns: 1;
-                -moz-columns: 1;
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
             }
-            
-            .abc {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 992px) {
+            .about-content {
                 flex-direction: column;
-                gap: 15px;
-            }
-            
-            .abc-item {
-                width: 80%;
-                margin: 0 auto;
-            }
-            
-            .header {
-                padding: 20px 10px;
-            }
-            
-            h1 {
-                font-size: 28px;
-            }
-            
-            h2 {
-                font-size: 22px;
             }
 
-            .contact-methods {
+            .trainer-image {
+                width: 250px;
+                height: 250px;
+            }
+
+            .programs-list {
+                columns: 2;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .logo {
+                font-size: 2.5rem;
+            }
+
+            .tagline {
+                font-size: 1.2rem;
+            }
+
+            .abc-container {
                 flex-direction: column;
                 align-items: center;
+                gap: 1rem;
             }
 
-            .contact-method {
+            .abc-item {
                 width: 100%;
                 max-width: 300px;
+                text-align: center;
             }
+
+            .client-list, .programs-list {
+                columns: 1;
+            }
+
+            .contact-card {
+                width: 100%;
+                max-width: 350px;
+            }
+        }
+
+        /* Utility Classes */
+        .animate-delay-1 {
+            animation-delay: 0.3s;
+        }
+
+        .animate-delay-2 {
+            animation-delay: 0.6s;
+        }
+
+        .animate-delay-3 {
+            animation-delay: 0.9s;
+        }
+
+        .mb-3 {
+            margin-bottom: 1.5rem;
+        }
+
+        .text-center {
+            text-align: center;
         }
     </style>
 </head>
 <body>
-    <div class="header animate__animated animate__fadeIn">
-        <div class="logo floating">COMMUNIQUE</div>
-        <div>The Training Team</div>
-        <div class="tagline">"Explore to be Unique"</div>
-        
-        <div class="abc">
-            <div class="abc-item">A-titude</div>
-            <div class="abc-item">B-ehavior</div>
-            <div class="abc-item">C-ompetency</div>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <h1 class="logo animate__animated animate__fadeInDown">COMMUNIQUE</h1>
+                <p class="tagline animate__animated animate__fadeIn animate-delay-1">"Explore to be Unique"</p>
+                
+                <div class="abc-container animate__animated animate__fadeIn animate-delay-2">
+                    <div class="abc-item">A-titude</div>
+                    <div class="abc-item">B-ehavior</div>
+                    <div class="abc-item">C-ompetency</div>
+                </div>
+            </div>
         </div>
-    </div>
+    </header>
 
-    <!-- New Dedicated Contact Card Section -->
-    <div class="contact-card">
-        <h2>Get In Touch</h2>
-        <p>Contact us for training inquiries and bookings</p>
-        
-        <div class="contact-methods">
-            <div class="contact-method phone pulse" onclick="window.location.href='tel:8220841740';">
-                <a href="tel:8220841740">
-                    <i class="fas fa-phone-alt"></i>
-                    <h3>Phone</h3>
-                    <p>+91 82208 41740</p>
-                </a>
+    <main class="container">
+        <!-- About Section -->
+        <section class="animate__animated animate__fadeInUp animate-delay-1">
+            <div class="section-header">
+                <h2>About Dr. Thamarai Selvi</h2>
             </div>
-            
-            <div class="contact-method email pulse" onclick="window.location.href='mailto:communique19@gmail.com';">
-                <a href="mailto:communique19@gmail.com">
-                    <i class="fas fa-envelope"></i>
-                    <h3>Email</h3>
-                    <p>communique19@gmail.com</p>
-                </a>
+            <div class="section-content">
+                <div class="about-content">
+                    <div class="about-text">
+                        <p>Dr. R. Thamarai Selvi is a seasoned professional with more than a decade of experience in Human Resource Training. She has been a Knowledge Facilitator in renowned business schools and corporate houses in Coimbatore for a long period. An enterprising individual with versatile knowledge and rich expertise in both Academic and Corporate sectors.</p>
+                        <p>She has successfully conducted more than 200 "tailor-made" sessions that include workshops, webinars, interactive lectures, and training calendars. These sessions have been highly interesting, informative, and inspirational to all kinds of audiences. The learning sessions are always interactive with simple activities, managerial exercises, team-building games, effective case studies, and useful videos.</p>
+                        <p>Dr. Thamarai Selvi specializes in transforming individuals and organizations through her unique training methodologies that focus on Attitude, Behavior, and Competency development.</p>
+                    </div>
+                    <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80" alt="Dr. Thamarai Selvi" class="trainer-image">
+                </div>
             </div>
-            
-            <div class="contact-method whatsapp pulse" onclick="window.open('https://wa.me/918220841740', '_blank');">
-                <a href="https://wa.me/918220841740" target="_blank">
-                    <i class="fab fa-whatsapp"></i>
-                    <h3>WhatsApp</h3>
-                    <p>+91 82208 41740</p>
-                </a>
+        </section>
+
+        <!-- Clients Section -->
+        <section class="animate__animated animate__fadeInUp animate-delay-2">
+            <div class="section-header">
+                <h2>Our Esteemed Clients</h2>
             </div>
-        </div>
-    </div>
-    
-    <div class="about-trainer">
-        <h1>ABOUT THE TRAINER</h1>
-        <p>The Resource Person has more than a decade of experience in Human Resource Training. She has been a Knowledge Facilitator in renowned Business in Coimbatore Schools for a long period. She is an enterprising individual with versatile knowledge and rich expertise in both Academic and Corporate sector.</p>
-        <p>She has successfully conducted more than 200 "tailor-made" sessions that includes — workshops, webinars, interactive lectures, training calendars etc. It has been very interesting, informative and also inspirational to all kinds of audiences. The learning sessions are always live with simple activities, managerial exercises, team building games, effective case studies, useful videos etc.</p>
-    </div>
-    
-    <div class="clients-section">
-        <div class="client-list">
-            <h2>Corporates</h2>
-            <ul>
-                <li>Vilvah Stores Pvt Ltd, Cbe.</li>
-                <li>Canara Bank, R.S.Puram branch, Cbe.</li>
-                <li>Dimexon Industries Pvt. Ltd, Cbe.</li>
-                <li>Eureka Industries Pvt. Ltd. Cbe.</li>
-                <li>Indian Forest Services, Cbe.</li>
-                <li>Jagannath Textile Company, Cbe.</li>
-                <li>LGB Pvt. Ltd. Cbe.</li>
-                <li>LRT Pvt. Ltd, Cbe.</li>
-                <li>Lakshmi Machine Works, Cbe.</li>
-                <li>MAG Solvics Pvt. Ltd, Cbe</li>
-                <li>Maxval IP Pvt. Ltd. Cbe.</li>
-                <li>Messer Cutting Systems Pvt. Ltd. Cbe.</li>
-                <li>Micro Cotton Pvt. Ltd. Cbe.</li>
-                <li>NHRD, Hosur</li>
-                <li>NIPM, Hosur</li>
-                <li>National Textile Corporation, Cbe.</li>
-                <li>PSG Foundry Pvt. Ltd. Cbe.</li>
-                <li>SIDBI, Cbe.</li>
-                <li>Sakthi Auto Components Pvt. Ltd. Erode dist.</li>
-                <li>Salem District Cooperative Bank, Salem</li>
-                <li>Sericulture Institute, Hosur</li>
-                <li>Techno Industries Pvt. Ltd. Cbe.</li>
-                <li>Titan Industries, Jewellery division, Hosur</li>
-                <li>Titan Industries, Watch division, Hosur</li>
-                <li>Prakash Technoplast Pvt Ltd, Hosur</li>
-                <li>ENN Consultancy Pvt Ltd, Cbe.</li>
-            </ul>
-        </div>
-        
-        <div class="client-list">
-            <h2>Academics</h2>
-            <ul>
-                <li><strong>Bharathiar University, Economics Department, Cbe.</strong></li>
-                <li><strong>Karpagam College of Arts & Science, Cbe</strong></li>
-                <li><em>Chinmaya Vidhyalaya, Cbe.</em></li>
-                <li><strong>Christ College, Malur</strong></li>
-                <li><strong>Dayananda Sagar University, Bangalore</strong></li>
-                <li><strong>Firebird Institute of Management, Cbe.</strong></li>
-                <li><strong>Government Arts College, Coimbatore</strong></li>
-                <li><strong>Government Polytechnic College, Cbe</strong></li>
-                <li><strong>GRG Matriculation School, Cbe.</strong></li>
-                <li><strong>Karpagam Academy of Higher Education, Cbe.</strong></li>
-                <li><strong>KPR College of Engineering, Cbe.</strong></li>
-                <li><strong>NGM College of Arts & Sciences, Pollachi</strong></li>
-                <li><strong>Nirmala College for Women, Cbe.</strong></li>
-                <li><strong>Perumal Manimegalai College, Hosur.</strong></li>
-                <li><strong>PSG College of Technology, Cbe.</strong></li>
-                <li><strong>PSG Institute of Medical & Research, Cbe.</strong></li>
-                <li><strong>PSG Public Schools, Cbe.</strong></li>
-                <li><strong>PSGR Krishnammal College for women, Cbe</strong></li>
-                <li><strong>Ramakrishna College of Arts & Sciences, Cbe.</strong></li>
-                <li><em>Sakthi Institute of Management Studies, Pollachi</em></li>
-                <li><strong>Sree Jayendra Saraswati Maha Vidhyalaya, Cbe.</strong></li>
-                <li><strong>St. Joseph College for Women, Tirupur</strong></li>
-                <li><strong>Tamilnadu Agricultural University, Cbe.</strong></li>
-                <li><strong>Tamilnadu Agricultural University, Kudum vammalai.</strong></li>
-                <li><strong>TERF Academy, Tirupur</strong></li>
-                <li><strong>Hindustan College of Arts & sciences, Cbe</strong></li>
-                <li><strong>TIPS College of Arts & Sciences, Cbe.</strong></li>
-            </ul>
-        </div>
-    </div>
-    
-    <div class="programs-container">
-        <h2>Training Programs Offered</h2>
-        <ul class="programs-list">
-            <li>Achieving excellence through quality</li>
-            <li>Achieving success in work life</li>
-            <li>Behaviour Modification for employees</li>
-            <li>Body Language</li>
-            <li>Building successful teams</li>
-            <li>Business Communication</li>
-            <li>Business Ethics</li>
-            <li>Campus to Corporate Programs</li>
-            <li>Career Development programs</li>
-            <li>Communicate Effectively in teams</li>
-            <li>Customer Delight through excellence</li>
-            <li>Decision making skills</li>
-            <li>Develop your ability to lead change</li>
-            <li>Effective Business Presentations</li>
-            <li>Effective Communication</li>
-            <li>Effective Presentations</li>
-            <li>Effective Time Management</li>
-            <li>Employment Readiness Programs</li>
-            <li>Enhancing Oral & Written skills</li>
-            <li>Entrepreneurial Development programs</li>
-            <li>Etiquettes</li>
-            <li>Faculty development programs</li>
-            <li>Global Entrepreneurs</li>
-            <li>Group Dynamics</li>
-            <li>How to groom students into industry-fit managers?</li>
-            <li>Impression Management</li>
-            <li>Induction programs</li>
-            <li>Interpersonal & team building skills</li>
-            <li>Interpersonal competency</li>
-            <li>Intrapersonal & Interpersonal skills</li>
-            <li>Language competency</li>
-            <li>Leadership & team building</li>
-            <li>Leadership Communication</li>
-            <li>Living in line with your values</li>
-            <li>Manage yourself & lead others</li>
-            <li>Managerial skills</li>
-            <li>Negotiation skills</li>
-            <li>Personal Branding</li>
-            <li>Personality Development programs</li>
-            <li>Personality Effectiveness</li>
-            <li>Personality grooming</li>
-            <li>Resume Writing</li>
-            <li>Soft skills development techniques</li>
-            <li>Soft skills for entrepreneurs</li>
-            <li>Stress management techniques</li>
-            <li>Supervisory Development programs</li>
-            <li>The seven habit of successful people</li>
-            <li>Train The Trainer Programs</li>
-            <li>What you believe, you can achieve</li>
-            <li>Women development programs</li>
-            <li>Developing a Global mind set</li>
-            <li>Developing Entrepreneurial Competency</li>
-            <li>Success Quotient</li>
-            <li>Creativity & Innovation Skills for Entrepreneurs</li>
-        </ul>
-    </div>
+            <div class="section-content">
+                <div class="clients-container">
+                    <div class="client-category">
+                        <h3>Corporates</h3>
+                        <ul class="client-list">
+                            <li>Vilvah Stores Pvt Ltd, Cbe.</li>
+                            <li>Canara Bank, R.S.Puram branch, Cbe.</li>
+                            <li>Dimexon Industries Pvt. Ltd, Cbe.</li>
+                            <li>Eureka Industries Pvt. Ltd. Cbe.</li>
+                            <li>Indian Forest Services, Cbe.</li>
+                            <li>Jagannath Textile Company, Cbe.</li>
+                            <li>LGB Pvt. Ltd. Cbe.</li>
+                            <li>LRT Pvt. Ltd, Cbe.</li>
+                            <li>Lakshmi Machine Works, Cbe.</li>
+                            <li>MAG Solvics Pvt. Ltd, Cbe</li>
+                            <li>Maxval IP Pvt. Ltd. Cbe.</li>
+                            <li>Messer Cutting Systems Pvt. Ltd. Cbe.</li>
+                            <li>Micro Cotton Pvt. Ltd. Cbe.</li>
+                            <li>NHRD, Hosur</li>
+                            <li>NIPM, Hosur</li>
+                            <li>National Textile Corporation, Cbe.</li>
+                            <li>PSG Foundry Pvt. Ltd. Cbe.</li>
+                            <li>SIDBI, Cbe.</li>
+                            <li>Sakthi Auto Components Pvt. Ltd. Erode dist.</li>
+                            <li>Salem District Cooperative Bank, Salem</li>
+                            <li>Sericulture Institute, Hosur</li>
+                            <li>Techno Industries Pvt. Ltd. Cbe.</li>
+                            <li>Titan Industries, Jewellery division, Hosur</li>
+                            <li>Titan Industries, Watch division, Hosur</li>
+                            <li>Prakash Technoplast Pvt Ltd, Hosur</li>
+                            <li>ENN Consultancy Pvt Ltd, Cbe.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="client-category">
+                        <h3>Academics</h3>
+                        <ul class="client-list">
+                            <li><strong>Bharathiar University, Economics Department, Cbe.</strong></li>
+                            <li><strong>Karpagam College of Arts & Science, Cbe</strong></li>
+                            <li><em>Chinmaya Vidhyalaya, Cbe.</em></li>
+                            <li><strong>Christ College, Malur</strong></li>
+                            <li><strong>Dayananda Sagar University, Bangalore</strong></li>
+                            <li><strong>Firebird Institute of Management, Cbe.</strong></li>
+                            <li><strong>Government Arts College, Coimbatore</strong></li>
+                            <li><strong>Government Polytechnic College, Cbe</strong></li>
+                            <li><strong>GRG Matriculation School, Cbe.</strong></li>
+                            <li><strong>Karpagam Academy of Higher Education, Cbe.</strong></li>
+                            <li><strong>KPR College of Engineering, Cbe.</strong></li>
+                            <li><strong>NGM College of Arts & Sciences, Pollachi</strong></li>
+                            <li><strong>Nirmala College for Women, Cbe.</strong></li>
+                            <li><strong>Perumal Manimegalai College, Hosur.</strong></li>
+                            <li><strong>PSG College of Technology, Cbe.</strong></li>
+                            <li><strong>PSG Institute of Medical & Research, Cbe.</strong></li>
+                            <li><strong>PSG Public Schools, Cbe.</strong></li>
+                            <li><strong>PSGR Krishnammal College for women, Cbe</strong></li>
+                            <li><strong>Ramakrishna College of Arts & Sciences, Cbe.</strong></li>
+                            <li><em>Sakthi Institute of Management Studies, Pollachi</em></li>
+                            <li><strong>Sree Jayendra Saraswati Maha Vidhyalaya, Cbe.</strong></li>
+                            <li><strong>St. Joseph College for Women, Tirupur</strong></li>
+                            <li><strong>Tamilnadu Agricultural University, Cbe.</strong></li>
+                            <li><strong>Tamilnadu Agricultural University, Kudum vammalai.</strong></li>
+                            <li><strong>TERF Academy, Tirupur</strong></li>
+                            <li><strong>Hindustan College of Arts & sciences, Cbe</strong></li>
+                            <li><strong>TIPS College of Arts & Sciences, Cbe.</strong></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Programs Section -->
+        <section class="animate__animated animate__fadeInUp animate-delay-3">
+            <div class="section-header">
+                <h2>Training Programs Offered</h2>
+            </div>
+            <div class="section-content">
+                <ul class="programs-list">
+                    <li>Achieving excellence through quality</li>
+                    <li>Achieving success in work life</li>
+                    <li>Behaviour Modification for employees</li>
+                    <li>Body Language</li>
+                    <li>Building successful teams</li>
+                    <li>Business Communication</li>
+                    <li>Business Ethics</li>
+                    <li>Campus to Corporate Programs</li>
+                    <li>Career Development programs</li>
+                    <li>Communicate Effectively in teams</li>
+                    <li>Customer Delight through excellence</li>
+                    <li>Decision making skills</li>
+                    <li>Develop your ability to lead change</li>
+                    <li>Effective Business Presentations</li>
+                    <li>Effective Communication</li>
+                    <li>Effective Presentations</li>
+                    <li>Effective Time Management</li>
+                    <li>Employment Readiness Programs</li>
+                    <li>Enhancing Oral & Written skills</li>
+                    <li>Entrepreneurial Development programs</li>
+                    <li>Etiquettes</li>
+                    <li>Faculty development programs</li>
+                    <li>Global Entrepreneurs</li>
+                    <li>Group Dynamics</li>
+                    <li>How to groom students into industry-fit managers?</li>
+                    <li>Impression Management</li>
+                    <li>Induction programs</li>
+                    <li>Interpersonal & team building skills</li>
+                    <li>Interpersonal competency</li>
+                    <li>Intrapersonal & Interpersonal skills</li>
+                    <li>Language competency</li>
+                    <li>Leadership & team building</li>
+                    <li>Leadership Communication</li>
+                    <li>Living in line with your values</li>
+                    <li>Manage yourself & lead others</li>
+                    <li>Managerial skills</li>
+                    <li>Negotiation skills</li>
+                    <li>Personal Branding</li>
+                    <li>Personality Development programs</li>
+                    <li>Personality Effectiveness</li>
+                    <li>Personality grooming</li>
+                    <li>Resume Writing</li>
+                    <li>Soft skills development techniques</li>
+                    <li>Soft skills for entrepreneurs</li>
+                    <li>Stress management techniques</li>
+                    <li>Supervisory Development programs</li>
+                    <li>The seven habit of successful people</li>
+                    <li>Train The Trainer Programs</li>
+                    <li>What you believe, you can achieve</li>
+                    <li>Women development programs</li>
+                    <li>Developing a Global mind set</li>
+                    <li>Developing Entrepreneurial Competency</li>
+                    <li>Success Quotient</li>
+                    <li>Creativity & Innovation Skills for Entrepreneurs</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="animate__animated animate__fadeInUp">
+            <div class="section-header">
+                <h2>Contact Dr. Thamarai Selvi</h2>
+            </div>
+            <div class="section-content text-center">
+                <p class="mb-3">For training inquiries, workshops, and corporate programs, please reach out:</p>
+                
+                <div class="contact-methods">
+                    <div class="contact-card phone-card">
+                        <i class="fas fa-phone-alt"></i>
+                        <h3>Phone</h3>
+                        <p>+91 82208 41740</p>
+                        <a href="tel:+918220841740">Call Now</a>
+                    </div>
+                    
+                    <div class="contact-card email-card">
+                        <i class="fas fa-envelope"></i>
+                        <h3>Email</h3>
+                        <p>communique19@gmail.com</p>
+                        <a href="mailto:communique19@gmail.com">Send Email</a>
+                    </div>
+                    
+                    <div class="contact-card whatsapp-card">
+                        <i class="fab fa-whatsapp"></i>
+                        <h3>WhatsApp</h3>
+                        <p>+91 82208 41740</p>
+                        <a href="https://wa.me/918220841740" target="_blank">Chat Now</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 
     <script>
-        // Add scroll animations
+        // Scroll animations
         document.addEventListener('DOMContentLoaded', function() {
-            const animateElements = document.querySelectorAll('.about-trainer, .client-list, .programs-container, .contact-card');
+            const animateElements = document.querySelectorAll('section');
             
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
-                        entry.target.style.opacity = 1;
-                        entry.target.style.transform = 'translateY(0)';
+                        entry.target.classList.add('animate__fadeInUp');
                     }
                 });
             }, { threshold: 0.1 });
             
             animateElements.forEach(el => {
-                el.style.opacity = 0;
-                el.style.transform = 'translateY(20px)';
-                el.style.transition = 'all 0.6s ease-out';
                 observer.observe(el);
             });
 
-            // Add click/touch feedback for contact methods
-            const contactMethods = document.querySelectorAll('.contact-method');
-            contactMethods.forEach(method => {
-                method.addEventListener('click', function() {
-                    this.style.transform = 'scale(0.95)';
-                    setTimeout(() => {
-                        this.style.transform = 'translateY(-10px)';
-                    }, 200);
+            // Add click effects to contact cards
+            const contactCards = document.querySelectorAll('.contact-card');
+            contactCards.forEach(card => {
+                card.addEventListener('click', function(e) {
+                    if (e.target.tagName === 'A') return;
+                    const link = this.querySelector('a');
+                    if (link) {
+                        window.location.href = link.href;
+                    }
                 });
             });
         });
