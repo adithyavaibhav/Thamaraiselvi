@@ -162,29 +162,17 @@
 
         /* About Section */
         .about-content {
-            display: flex;
-            gap: 2rem;
-            align-items: center;
+            display: block;
         }
 
         .about-text {
-            flex: 1;
+            width: 100%;
         }
 
         .about-text p {
             margin-bottom: 1.5rem;
             font-size: 1.1rem;
             color: #334155;
-        }
-
-        .trainer-image {
-            width: 300px;
-            height: 300px;
-            border-radius: 16px;
-            object-fit: cover;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-            border: 5px solid white;
-            animation: float 6s ease-in-out infinite;
         }
 
         /* Clients Section */
@@ -356,12 +344,6 @@
         }
 
         /* Animations */
-        @keyframes float {
-            0% { transform: translateY(0px); }
-            50% { transform: translateY(-15px); }
-            100% { transform: translateY(0px); }
-        }
-
         @keyframes shine {
             0% { transform: rotate(30deg) translate(-10%, -10%); }
             100% { transform: rotate(30deg) translate(10%, 10%); }
@@ -380,15 +362,6 @@
 
         /* Responsive Styles */
         @media (max-width: 992px) {
-            .about-content {
-                flex-direction: column;
-            }
-
-            .trainer-image {
-                width: 250px;
-                height: 250px;
-            }
-
             .programs-list {
                 columns: 2;
             }
@@ -476,7 +449,6 @@
                         <p>She has successfully conducted more than 200 "tailor-made" sessions that include workshops, webinars, interactive lectures, and training calendars. These sessions have been highly interesting, informative, and inspirational to all kinds of audiences. The learning sessions are always interactive with simple activities, managerial exercises, team-building games, effective case studies, and useful videos.</p>
                         <p>Dr. Thamarai Selvi specializes in transforming individuals and organizations through her unique training methodologies that focus on Attitude, Behavior, and Competency development.</p>
                     </div>
-                    <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80" alt="Dr. Thamarai Selvi" class="trainer-image">
                 </div>
             </div>
         </section>
