@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Training Brochure - Communique</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         /* CSS Styles */
         :root {
@@ -237,7 +238,89 @@
         em {
             color: var(--secondary-color);
         }
-        
+
+        /* New Contact Card Styles */
+        .contact-card {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            margin: 40px 0;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            animation: fadeInUp 1s 0.8s both;
+        }
+
+        .contact-card h2 {
+            margin-top: 0;
+            color: var(--primary-color);
+        }
+
+        .contact-methods {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .contact-method {
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+            color: white;
+            padding: 25px;
+            border-radius: 12px;
+            width: 250px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .contact-method:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .contact-method i {
+            font-size: 40px;
+            margin-bottom: 15px;
+        }
+
+        .contact-method h3 {
+            margin: 0 0 10px 0;
+            font-size: 20px;
+        }
+
+        .contact-method p {
+            margin: 0;
+            font-size: 18px;
+            word-break: break-all;
+        }
+
+        .contact-method a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .contact-method.phone {
+            background: linear-gradient(135deg, #4CAF50, #8BC34A);
+        }
+
+        .contact-method.email {
+            background: linear-gradient(135deg, #FF5722, #FF9800);
+        }
+
+        .contact-method.whatsapp {
+            background: linear-gradient(135deg, #25D366, #128C7E);
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        .pulse {
+            animation: pulse 2s infinite;
+        }
+
         @keyframes float {
             0% { transform: translateY(0px); }
             50% { transform: translateY(-10px); }
@@ -276,6 +359,16 @@
             h2 {
                 font-size: 22px;
             }
+
+            .contact-methods {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .contact-method {
+                width: 100%;
+                max-width: 300px;
+            }
         }
     </style>
 </head>
@@ -290,23 +383,36 @@
             <div class="abc-item">B-ehavior</div>
             <div class="abc-item">C-ompetency</div>
         </div>
+    </div>
+
+    <!-- New Dedicated Contact Card Section -->
+    <div class="contact-card">
+        <h2>Get In Touch</h2>
+        <p>Contact us for training inquiries and bookings</p>
         
-        <div class="contact-info">
-            <div class="contact-section">
-                <div class="highlight">Personal</div>
-                <div>Contact</div>
+        <div class="contact-methods">
+            <div class="contact-method phone pulse" onclick="window.location.href='tel:8220841740';">
+                <a href="tel:8220841740">
+                    <i class="fas fa-phone-alt"></i>
+                    <h3>Phone</h3>
+                    <p>+91 82208 41740</p>
+                </a>
             </div>
-            <div class="contact-section">
-                <div class="highlight">Professional</div>
-                <div>Dr.R.Thamaraiselvi</div>
+            
+            <div class="contact-method email pulse" onclick="window.location.href='mailto:communique19@gmail.com';">
+                <a href="mailto:communique19@gmail.com">
+                    <i class="fas fa-envelope"></i>
+                    <h3>Email</h3>
+                    <p>communique19@gmail.com</p>
+                </a>
             </div>
-            <div class="contact-section">
-                <div class="highlight">Academic</div>
-                <div>Phone: 82208417400</div>
-                <div>communique19@gmail.com</div>
-            </div>
-            <div class="contact-section">
-                <div class="highlight">Corporate</div>
+            
+            <div class="contact-method whatsapp pulse" onclick="window.open('https://wa.me/918220841740', '_blank');">
+                <a href="https://wa.me/918220841740" target="_blank">
+                    <i class="fab fa-whatsapp"></i>
+                    <h3>WhatsApp</h3>
+                    <p>+91 82208 41740</p>
+                </a>
             </div>
         </div>
     </div>
@@ -447,7 +553,7 @@
     <script>
         // Add scroll animations
         document.addEventListener('DOMContentLoaded', function() {
-            const animateElements = document.querySelectorAll('.about-trainer, .client-list, .programs-container');
+            const animateElements = document.querySelectorAll('.about-trainer, .client-list, .programs-container, .contact-card');
             
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
@@ -463,6 +569,17 @@
                 el.style.transform = 'translateY(20px)';
                 el.style.transition = 'all 0.6s ease-out';
                 observer.observe(el);
+            });
+
+            // Add click/touch feedback for contact methods
+            const contactMethods = document.querySelectorAll('.contact-method');
+            contactMethods.forEach(method => {
+                method.addEventListener('click', function() {
+                    this.style.transform = 'scale(0.95)';
+                    setTimeout(() => {
+                        this.style.transform = 'translateY(-10px)';
+                    }, 200);
+                });
             });
         });
     </script>
